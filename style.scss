@@ -1,0 +1,69 @@
+     @mixin formData {
+         border: none;
+         outline: none;
+         margin: 0.7em;
+     }
+     
+     * {
+         margin: 0px;
+         padding: 0px;
+         font-family: helvetica;
+     }
+     
+     .contact {
+         //  display: flex;
+         height: 100%;
+         &-img {
+             min-height: 100%;
+             height: auto;
+             background-image: url("./bg-01.jpg");
+             background-repeat: no-repeat;
+             background-position: center;
+             padding: 0px!important;
+             background-size: cover !important;
+         }
+         &-row {
+             margin: 0px!important;
+         }
+         &-form {
+             font-family: helvetica;
+             //  background-color: white;
+             &-name {
+                 border: 1px solid #e6e6e6;
+                 border-radius: 10px;
+                 margin-bottom: 20px;
+             }
+         }
+         &-form-title {
+             font-size: 2em;
+         }
+         &-submit {
+             background-color: #6675df !important;
+             //  color: white;
+         }
+         &-name {
+             @include formData;
+         }
+         &-lname {
+             @include formData;
+         }
+         &-email {
+             @include formData;
+         }
+         &-msg {
+             resize: none;
+             @include formData;
+         }
+     }
+     
+     //  @media screen and (max-width: 800px) {
+     //      .contact {
+     //          width: 100vw;
+     //      }
+     //      &-img {
+     //          height: 50em;
+     //      }
+     //      &-form {
+     //          padding: 9em 2em 9em;
+     //      }
+     //  }
